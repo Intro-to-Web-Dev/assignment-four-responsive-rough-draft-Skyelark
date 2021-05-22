@@ -1,0 +1,181 @@
+/*Shared*/
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+#headstruct{
+    background-color: #71ABAF;
+    height: 75px;
+    width: 100%;
+    display:flex;
+    padding-left: 15px;
+    align-items: center;
+}
+#main_area{
+    display: flex;
+    flex-wrap: wrap;
+    grid-area: main;
+}
+#footer{
+    background-color: #71ABAF;
+    height: 75px;
+    width: 100%;
+    display: flex;
+    color: white;
+    justify-content: center;
+    align-items: center;
+}
+#footer > p{
+     color: white;
+     text-decoration: none;
+}
+
+/*page title*/
+h1{
+    color: #D87C2E;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: xx-large;
+    margin-bottom:20px;
+}
+/*soup title*/
+h2{
+    color: #2D6952;
+    font-family: 'Cabin Sketch', cursive;
+    font-size: x-large;
+    text-align: center;
+    margin-top: 10px;
+}
+/*logo*/
+h4{
+    color: white;
+    font-size: xx-large;
+    align-self: center;
+}
+/*will use as an alternate to body copy for greeting paragraph and in recipes*/
+p{
+    color: #414B4A;
+    font-family: 'Cormorant Upright', serif;
+    font-size: large;
+    line-height: 25px;
+    letter-spacing: normal;
+    word-spacing: normal;
+}
+/*will use for most body copy*/
+body{
+    color: #414B4A;
+    font-family: 'Cormorant Upright', serif;
+    font-size: large;
+    line-height: 25px;
+    background: url(./img/cuttingboard.jpg);
+    background-repeat: repeat-y;
+}
+/*Home*/
+
+#grid_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:  
+    "open open open open"
+    "main main main main" 
+    "main main main main";
+    width: 75%;
+    height: 100%;
+    min-height: 750px;
+    margin: auto;
+    background:rgba(255, 255, 255, 0.5);
+    padding-bottom: 2%;
+}
+.boxes{
+    flex: 1 0 400px;
+    margin: 2.5%;
+    text-align: center;
+}
+.opening{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2.5%;
+    margin-bottom:2.5%;
+    grid-area: open;
+    text-align: center;
+}
+/*Soup*/
+
+#soup_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    grid-template-areas:
+    "pic pic pic pic"
+    "description description description description" 
+    "ingredients ingredients ingredients ingredients"
+    "instructions instructions instructions instructions";
+    width: 75%;
+    height: 100%;
+    margin: auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding-top: 40px;
+    padding-bottom: 20px;
+}
+#description{
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 2.5%;
+    text-align: center;
+    font-style: italic;
+    grid-area: description;
+}
+#ingredients{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2.5%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    text-align: center;
+    grid-area: ingredients;   
+}
+#instructions{
+    margin-left: 15%;
+    margin-right: 15%;
+    margin-top: 2.5%;
+    margin-bottom:2.5%;
+    text-align: center;
+    grid-area: instructions;
+}
+#pic{
+    text-align: center;
+    grid-area: pic;
+}
+.picture{
+    width: 400px;
+    height: 300px;
+    border: 10px solid white;
+    object-fit:cover;
+}
+.title{
+    width: 100%;
+}
+li{
+    list-style-position: inside;
+}
+
+/* smaller than 768 pixels */
+@media screen and (max-width: 768px) {
+    .picture{
+        width:80%;
+    }
+}
+/* smaller than 480 pixels */
+@media screen and (max-width: 480px) {
+    .picture{
+        width:100%;
+	}
+    #grid_container{
+        width: 100%;
+    }
+    #soup_container{
+        width: 100%;
+    }
+}
